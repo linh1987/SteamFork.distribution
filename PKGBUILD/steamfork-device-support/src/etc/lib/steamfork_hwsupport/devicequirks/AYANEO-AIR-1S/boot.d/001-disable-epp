@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Use passive for cpu boost control
+
+echoo passive >/sys/devices/system/cpu/amd_pstate/status

@@ -75,6 +75,8 @@ package_linux-firmware() {
     install -Dt "${pkgdir}/usr/lib/firmware/" -m755 ${blob}.zst
   done
 
+  install -Dt "${pkgdir}/usr/lib/firmware/" -m644 ../hda-jack-retask.fw 
+
   cd ${pkgbase}
 
   ZSTD_CLEVEL=19 make DESTDIR="${pkgdir}" FIRMWAREDIR=/usr/lib/firmware install-zst
